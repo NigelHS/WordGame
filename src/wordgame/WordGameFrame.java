@@ -211,11 +211,11 @@ public class WordGameFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void initButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_initButtonActionPerformed
-        Collections.addAll(names, "Rudolph", "Santa");
-        Collections.addAll(verbs, "flew", "crashed");
-        Collections.addAll(adverbs, "quickly", "slowly");
-        Collections.addAll(nouns, "mountain", "snowman");
-        Collections.addAll(adjectives, "huge", "abominable");
+        Collections.addAll(names, "Nigel", "Vilmos");
+        Collections.addAll(verbs, "run", "destroy");
+        Collections.addAll(adverbs, "Swiftly", "slowly");
+        Collections.addAll(nouns, "dungeon", "pyramid");
+        Collections.addAll(adjectives, "blue", "rough");
         initButton.setEnabled(false);
     }//GEN-LAST:event_initButtonActionPerformed
 
@@ -239,6 +239,18 @@ public class WordGameFrame extends javax.swing.JFrame {
 
     private void removeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonActionPerformed
         // Remove the last element from the end of each of the Arrays.
+         int index;
+             index=Collections.binarySearch(names,nameInput.getText());
+             index=Collections.binarySearch(verbs,verbInput.getText());
+             index=Collections.binarySearch(adverbs,adverbInput.getText());
+             index=Collections.binarySearch(nouns,nounInput.getText());
+             index=Collections.binarySearch(adjectives,adjectiveInput.getText());
+             if (index>-1)
+             names.remove(nameInput.getText());
+             verbs.remove(verbInput.getText());
+             adverbs.remove(adverbInput.getText());
+             nouns.remove(nounInput.getText());
+        
         names.remove(names.size()-1);
         verbs.remove(verbs.size()-1);
         adverbs.remove(adverbs.size()-1);
